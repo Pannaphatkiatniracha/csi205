@@ -54,11 +54,11 @@ const Animation = () => {
   // รูปจาก public/img
   const types = {
     0: "",
-    1: "url('/img/basketball.png')",
-    2: "url('/img/football.png')",
-    3: "url('/img/volleyball.png')",
-    4: "url('/img/Human.png')",
-    5: "url('/img/cartoon.png')",
+    1: "url('img/basketball.png')",
+    2: "url('img/football.png')",
+    3: "url('img/volleyball.png')",
+    4: "url('img/Human.png')",
+    5: "url('img/cartoon.png')",
   };
 
   useEffect(() => {
