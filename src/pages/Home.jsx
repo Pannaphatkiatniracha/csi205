@@ -3,7 +3,7 @@ const Home = () => {
     <div className="flex flex-col items-center text-center pt-12 px-4 md:px-0 bg-gradient-to-b from-purple-100 via-purple-200 to-purple-100">
       {/* รูปโปรไฟล์ */}
       <img
-        src="/img/Profile.jpg"
+        src="/Profile.jpg"
         alt="Profile"
         className="rounded-full shadow-lg mb-3 w-[220px] h-[220px] object-cover border-4 border-white"
       />
@@ -18,13 +18,12 @@ const Home = () => {
         ชั้นปีที่ 2 คณะเทคโนโลยีสารสนเทศ <br />
         สาขาวิทยาการคอมพิวเตอร์และนวัตกรรมการพัฒนาซอฟต์แวร์
       </h6>
-
-      <p className="text-purple-500 mt-2 text-md md:text-lg">
+        <p className="text-purple-500 mt-2 text-md md:text-lg">
         ชื่อเล่น: เวีย <br />
         อายุ: 19 ปี <br />
         ศิลปินคนโปรด: tiffanyyoung 
       </p>
-    </div>
+</div>
   );
 };
 
