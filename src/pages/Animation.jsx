@@ -5,6 +5,7 @@ const Animation = () => {
   const [ballType, setBallType] = useState(0);
   const [angle] = useState(Math.PI / 4); // 45 องศา
 
+  // การเคลื่อนที่ของลูกบอล
   useEffect(() => {
     const fieldWidth = 700;
     const fieldHeight = 400;
@@ -41,7 +42,7 @@ const Animation = () => {
       x = Math.max(0, Math.min(x, maxX));
       y = Math.max(0, Math.min(y, maxY));
 
-      // เคลื่อนที่โดยไม่หมุน
+      // เคลื่อนที่ลูกบอล
       if (ball) {
         ball.style.left = `${x}px`;
         ball.style.top = `${y}px`;
@@ -51,17 +52,17 @@ const Animation = () => {
     return () => clearInterval(interval);
   }, [running, ballType, angle]);
 
-  // รูปจาก public/img
-const types = {
-  0: "",
-  1: "url('/csi205/img/basketball.png')",
-  2: "url('/csi205/img/football.png')",
-  3: "url('/csi205/img/volleyball.png')",
-  4: "url('/csi205/img/Human.png')",
-  5: "url('/csi205/img/cartoon.png')",
-};
+  // Path รูปลูกบอลจาก public/img
+  const types = {
+    0: "",
+    1: "url('/img/basketball.png')",
+    2: "url('/img/football.png')",
+    3: "url('/img/volleyball.png')",
+    4: "url('/img/Human.png')",
+    5: "url('/img/cartoon.png')",
+  };
 
-
+  // อัปเดตรูปลูกบอล
   useEffect(() => {
     const ball = document.getElementById("ball");
     if (ball) {
@@ -71,7 +72,7 @@ const types = {
     }
   }, [ballType]);
 
-  // Keyboard controls
+  // ควบคุมด้วย keyboard
   useEffect(() => {
     const handleKey = (e) => {
       if (e.code === "Space") setRunning((prev) => !prev);
@@ -82,25 +83,24 @@ const types = {
   }, []);
 
   return (
-    
     <div className="flex flex-col items-center mt-8">
       {/* Field */}
       <div
-  id="field"
-  className="relative bg-gray-200 border-4 border-gray-800 rounded-lg"
-  style={{
-    width: "700px",
-    height: "400px",
-    backgroundImage: "url('/csi205/img/footballss.jpg')",
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-  }}
->
-  <div
-    id="ball"
-    className="absolute w-24 h-24 rounded-full bg-orange-500"
-  ></div>
-</div>
+        id="field"
+        className="relative bg-gray-200 border-4 border-gray-800 rounded-lg"
+        style={{
+          width: "700px",
+          height: "400px",
+          backgroundImage: "url('/img/footballss.jpg')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        <div
+          id="ball"
+          className="absolute w-24 h-24 rounded-full bg-orange-500"
+        ></div>
+      </div>
 
       {/* Controls */}
       <div className="flex flex-wrap justify-between items-center mt-4 w-[720px]">
