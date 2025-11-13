@@ -90,7 +90,7 @@ const Animation = () => {
   style={{
     width: "700px",
     height: "400px",
-    backgroundImage: "url('/img/footballss.jpg')", 
+    backgroundImage: "url('img/footballss.jpg')", 
     backgroundSize: "cover",
     backgroundPosition: "center",
   }}
