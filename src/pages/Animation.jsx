@@ -52,15 +52,14 @@ const Animation = () => {
   }, [running, ballType, angle]);
 
   // รูปจาก public/img
-const types = {
-  0: "",
-  1: "url('/csi205/img/basketball.png')",
-  2: "url('/csi205/img/football.png')",
-  3: "url('/csi205/img/volleyball.png')",
-  4: "url('/csi205/img/Human.png')",
-  5: "url('/csi205/img/cartoon.png')",
-};
-
+  const types = {
+    0: "",
+    1: "url('/img/basketball.png')",
+    2: "url('/img/football.png')",
+    3: "url('/img/volleyball.png')",
+    4: "url('/img/Human.png')",
+    5: "url('/img/cartoon.png')",
+  };
 
   useEffect(() => {
     const ball = document.getElementById("ball");
@@ -91,7 +90,7 @@ const types = {
   style={{
     width: "700px",
     height: "400px",
-    backgroundImage: "url('/csi205/img/footballss.jpg')",
+    backgroundImage: "url('/img/footballss.jpg')", 
     backgroundSize: "cover",
     backgroundPosition: "center",
   }}
